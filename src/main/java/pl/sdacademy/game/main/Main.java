@@ -10,15 +10,11 @@ import java.util.concurrent.Executors;
 
 public class Main {
 
-    public static void message(String message) {
-        System.out.println(message);
-    }
-
     public static void main(String[] args) {
 
         int threadNumber = 2;
 
-        //        tworzymy pule watkow, pula dostepnych watkow: 1
+        //        tworzymy pule watkow, pula dostepnych watkow
 
         ExecutorService executor = Executors.newFixedThreadPool(threadNumber);
 
@@ -49,6 +45,7 @@ public class Main {
        /* Runnable thread1 = (Gamer gamer1) -> {
 
 //            watek bedzie rzucal kostka
+//            przeniesione do klasy GamerRunnable
 
             message(gamer1.getName() + "1: throw a dice...");
             Random random = new Random();
@@ -59,7 +56,6 @@ public class Main {
 
 //        po stworzeniu klasy GamerRunnable
 
-//        Runnable thread2 = ;
 
         executor.execute(() -> System.out.println("hello!"));
 
